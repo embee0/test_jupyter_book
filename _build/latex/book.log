@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.27)  28 JUN 2024 08:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.27)  28 JUN 2024 10:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1690,7 +1690,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 ]
 Chapter 1.
 
-Underfull \hbox (badness 6300) in paragraph at lines 188--192
+Underfull \hbox (badness 6300) in paragraph at lines 192--196
 \TU/FreeSerif(0)/m/n/10 You can also cite references that are stored in a \TU/F
 reeMono(0)/m/n/10 bibtex \TU/FreeSerif(0)/m/n/10 file. For example, the followi
 ng syntax:
@@ -1714,7 +1714,11 @@ Chapter 4.
 
 ] [10
 
-] (./book.ind) [11
+]
+Chapter 5.
+[11] [12
+
+] (./book.ind) [13
 
 ] (./book.aux)
  ***********
@@ -1722,15 +1726,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 37DC300F1ADD4E601D53F94074C52696;1239.
+(rerunfilecheck)             Checksum: CC5924C161FDF73317F53D26199A998E;1309.
  ) 
 Here is how much of TeX's memory you used:
- 44315 strings out of 474773
- 1023316 string characters out of 5757724
+ 44317 strings out of 474773
+ 1023373 string characters out of 5757724
  1942839 words of memory out of 5000000
- 65659 multiletter control sequences out of 15000+600000
+ 65661 multiletter control sequences out of 15000+600000
  563513 words of font info for 111 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  99i,21n,114p,742b,2288s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on book.pdf (15 pages).
+Output written on book.pdf (17 pages).

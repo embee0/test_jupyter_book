@@ -34,6 +34,11 @@ It will be rendered in a special box when you build your book.
 Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
 
 
+## Learn more
+
+This is just a simple starter to get you started.
+You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
+
 ## Citations
 
 You can also cite references that are stored in a `bibtex` file. For example,
@@ -49,7 +54,3 @@ then the bibliography is inserted with:
 ```{bibliography}
 ```
 
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
