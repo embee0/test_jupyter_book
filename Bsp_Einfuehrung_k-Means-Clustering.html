@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Content with notebooks &#8212; Mein erstes Buch</title>
+    <title>Einführung in das k-Means-Clustering &#8212; Mein erstes Buch</title>
   
   
   
@@ -57,13 +57,11 @@
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Bsp_Einfuehrung_k-Means-Clustering';</script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="P5JS als iframe einbinden" href="p5einbinden.html" />
+    <link rel="prev" title="Mein erstes eigenes Kapitel" href="neue-markdown-datei.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="de"/>
   </head>
@@ -177,10 +175,10 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="neue-markdown-datei.html">Mein erstes eigenes Kapitel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bsp_Einfuehrung_k-Means-Clustering.html">Einführung in das k-Means-Clustering</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Einführung in das k-Means-Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="p5einbinden.html">P5JS als iframe einbinden</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trinket_einbinden.html">Test mit trinket.io</a></li>
 </ul>
@@ -254,7 +252,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBsp_Einfuehrung_k-Means-Clustering.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Öffnen Sie ein Problem"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +282,7 @@
       
       
       
-      <li><a href="_sources/notebooks.ipynb" target="_blank"
+      <li><a href="_sources/Bsp_Einfuehrung_k-Means-Clustering.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Quelldatei herunterladen"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +292,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -368,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Content with notebooks</h1>
+    <h1>Einführung in das k-Means-Clustering</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,9 +376,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-notebooks">Markdown + notebooks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown">MyST markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocks-and-outputs">Code blocks and outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberblick">Überblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmus">Algorithmus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-in-python">Beispiel in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubungsaufgaben">Übungsaufgaben</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fazit">Fazit</a></li>
 </ul>
             </nav>
         </div>
@@ -392,94 +392,95 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="content-with-notebooks">
-<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this heading">#</a></h1>
-<p>```{sidebar} Mal sehen ob <code class="docutils literal notranslate"><span class="pre">sidebar</span></code> funktioniert
-Heißt das nicht in MySt eigentlich <code class="docutils literal notranslate"><span class="pre">margin</span></code>?</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-```{note}
-Auch in `.ipynb`-Dateien kann ich `note` und andere *directives* nutzen.  
-</pre></div>
-</div>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<section id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this heading">#</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p>You can also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[
-math^{blocks}
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mbox{mean} la_{tex} \\ \\
-math blocks
-\end{aligned}
-\end{split}\]</div>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
-</section>
-<section id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this heading">#</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
-</section>
-<section id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this heading">#</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x1080c4790&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/838ce9952004e9009d87deadc3b57923717c81efc54720cb0d51064cf5ce386b.png" src="_images/838ce9952004e9009d87deadc3b57923717c81efc54720cb0d51064cf5ce386b.png" />
-</div>
-</div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
-<p>Jetzt probiere ich mal noch eins von diesen Myst-spezifischen Sachen:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="einfuhrung-in-das-k-means-clustering">
+<h1>Einführung in das k-Means-Clustering<a class="headerlink" href="#einfuhrung-in-das-k-means-clustering" title="Permalink to this heading">#</a></h1>
+<p>(Dieser Text stammt von ChatGPT um zu testen, wie gut ich MyST-Markdown darin erzeugen kann.)</p>
+<section id="uberblick">
+<h2>Überblick<a class="headerlink" href="#uberblick" title="Permalink to this heading">#</a></h2>
+<p>Das k-Means-Clustering ist ein beliebter unüberwachter Lernalgorithmus, der dazu verwendet wird, Datenpunkte in Gruppen oder Cluster zu unterteilen. Ziel ist es, die Daten so zu segmentieren, dass die Punkte innerhalb eines Clusters möglichst ähnlich und die Punkte zwischen den Clustern möglichst unterschiedlich sind.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Dies ist eine Notiz</p>
+<p>k-Means-Clustering wird häufig in Bereichen wie Marketing, Mustererkennung, Bildsegmentierung und vielen anderen angewendet.</p>
 </div>
+</section>
+<section id="algorithmus">
+<h2>Algorithmus<a class="headerlink" href="#algorithmus" title="Permalink to this heading">#</a></h2>
+<p>Der k-Means-Algorithmus arbeitet in folgenden Schritten:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Der Wert von k muss im Voraus festgelegt werden und kann durch verschiedene Methoden wie das Elbow-Verfahren bestimmt werden.</p>
+</aside>
+<ol class="arabic simple">
+<li><p><strong>Initialisierung</strong>: Wähle k Anfangszentren zufällig aus den Datenpunkten.</p></li>
+<li><p><strong>Zuordnung</strong>: Weise jeden Datenpunkt dem nächstgelegenen Zentrum zu.</p></li>
+<li><p><strong>Aktualisierung</strong>: Berechne die neuen Zentren als den Mittelwert der zugewiesenen Punkte.</p></li>
+<li><p>Wiederhole Schritt 2 und 3, bis die Zentren sich nicht mehr signifikant ändern.</p></li>
+</ol>
+</section>
+<section id="beispiel-in-python">
+<h2>Beispiel in Python<a class="headerlink" href="#beispiel-in-python" title="Permalink to this heading">#</a></h2>
+<p>Im folgenden Beispiel werden wir den k-Means-Algorithmus auf einen einfachen Datensatz anwenden. Wir verwenden dazu die Bibliothek <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importiere notwendige Bibliotheken</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+
+<span class="c1"># Erzeuge einen Datensatz mit 3 Clustern</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Führe k-Means-Clustering durch</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Vorhersagen</span>
+<span class="n">y_kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Plot der Ergebnisse</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y_kmeans</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">centers</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;k-Means Clustering&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Feature 1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Feature 2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="ubungsaufgaben">
+<h2>Übungsaufgaben<a class="headerlink" href="#ubungsaufgaben" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Clusteranzahl bestimmen</strong>:</p>
+<ul class="simple">
+<li><p>Verwenden Sie das Elbow-Verfahren, um die optimale Anzahl von Clustern für einen gegebenen Datensatz zu bestimmen.</p></li>
+<li><p>Erstellen Sie ein Diagramm, das den „Elbow“ zeigt.</p></li>
+</ul>
+</li>
+<li><p><strong>Anwendung auf andere Datensätze</strong>:</p>
+<ul class="simple">
+<li><p>Wenden Sie den k-Means-Algorithmus auf einen anderen Datensatz Ihrer Wahl an (z.B. <code class="docutils literal notranslate"><span class="pre">Iris</span></code>-Datensatz).</p></li>
+<li><p>Visualisieren Sie die Ergebnisse und vergleichen Sie sie mit den tatsächlichen Labels (falls vorhanden).</p></li>
+</ul>
+</li>
+<li><p><strong>Vergleich mit anderen Clustering-Algorithmen</strong>:</p>
+<ul class="simple">
+<li><p>Vergleichen Sie k-Means mit einem anderen Clustering-Algorithmus wie DBSCAN oder hierarchischem Clustering.</p></li>
+<li><p>Diskutieren Sie die Vor- und Nachteile der verschiedenen Methoden.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Wichtig</p>
+<p>Diese Aufgaben sollen Ihnen helfen, ein tieferes Verständnis für k-Means-Clustering zu entwickeln und dessen Anwendung in der Praxis zu üben.</p>
+</div>
+</section>
+<section id="fazit">
+<h2>Fazit<a class="headerlink" href="#fazit" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Denken Sie daran, dass die Wahl des richtigen k-Werts und die Initialisierung der Clusterzentren die Ergebnisse stark beeinflussen können.</p>
+</aside>
+<p>Das k-Means-Clustering ist ein mächtiges Werkzeug zur Segmentierung von Daten. Es ist wichtig, den richtigen Wert für k zu finden und die Ergebnisse sorgfältig zu interpretieren. Mit den oben genannten Übungen können Sie Ihre Fähigkeiten im Umgang mit diesem Algorithmus weiter vertiefen.</p>
 </section>
 </section>
 
@@ -514,20 +515,20 @@ with your book. For more information about this, see <a class="reference externa
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown.html"
+       href="neue-markdown-datei.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">zurück</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Mein erstes eigenes Kapitel</p>
       </div>
     </a>
     <a class="right-next"
-       href="markdown-notebooks.html"
+       href="p5einbinden.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">weiter</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">P5JS als iframe einbinden</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -547,9 +548,11 @@ with your book. For more information about this, see <a class="reference externa
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-notebooks">Markdown + notebooks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown">MyST markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocks-and-outputs">Code blocks and outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberblick">Überblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmus">Algorithmus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-in-python">Beispiel in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubungsaufgaben">Übungsaufgaben</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fazit">Fazit</a></li>
 </ul>
   </nav></div>
 
