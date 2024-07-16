@@ -8,5 +8,6 @@ chapters:
 - file: notebooks
 - file: markdown-notebooks
 - file: neue-markdown-datei
+- file: Bsp_Einfuehrung_k-Means-Clustering
 - file: p5einbinden
 - file: trinket_einbinden
