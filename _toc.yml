@@ -9,3 +9,4 @@ chapters:
 - file: markdown-notebooks
 - file: neue-markdown-datei
 - file: p5einbinden
+- file: trinket_einbinden
